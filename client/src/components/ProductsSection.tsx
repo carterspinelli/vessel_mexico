@@ -12,38 +12,38 @@ export default function ProductsSection() {
   const products: Product[] = [
     {
       id: 1,
-      title: "Precision Screwdrivers",
-      description: "High-quality screwdrivers designed for precision work in electronics, small appliances, and detailed mechanical applications.",
+      title: "Destornilladores de Precisión",
+      description: "Destornilladores de alta calidad diseñados para trabajos de precisión en electrónica, pequeños electrodomésticos y aplicaciones mecánicas detalladas.",
       image: stockImages.precisionScrewdrivers
     },
     {
       id: 2,
-      title: "Impact Drivers",
-      description: "Powerful and efficient impact drivers perfect for construction, woodworking, and industrial applications.",
+      title: "Atornilladores de Impacto",
+      description: "Atornilladores de impacto potentes y eficientes, perfectos para construcción, carpintería y aplicaciones industriales.",
       image: stockImages.impactDrivers
     },
     {
       id: 3,
-      title: "Specialty Bits",
-      description: "Specialized bits for every application, including security, torx, hex, and custom designs for specific industry needs.",
+      title: "Puntas Especializadas",
+      description: "Puntas especializadas para cada aplicación, incluyendo seguridad, torx, hexagonal y diseños personalizados para necesidades específicas de la industria.",
       image: stockImages.specialtyBits
     },
     {
       id: 4,
-      title: "ESD-Safe Tools",
-      description: "Electrostatic discharge-safe tools for electronics manufacturing, repair, and other sensitive applications.",
+      title: "Herramientas ESD",
+      description: "Herramientas seguras contra descargas electrostáticas para fabricación de electrónica, reparación y otras aplicaciones sensibles.",
       image: stockImages.esdTools
     },
     {
       id: 5,
-      title: "Tool Sets",
-      description: "Comprehensive tool sets designed for professionals in various industries, from automotive to precision mechanics.",
+      title: "Juegos de Herramientas",
+      description: "Juegos completos de herramientas diseñados para profesionales en diversas industrias, desde automotriz hasta mecánica de precisión.",
       image: stockImages.toolSets
     },
     {
       id: 6,
-      title: "Specialty Tools",
-      description: "Unique tools designed for specific applications and industries where standard tools won't suffice.",
+      title: "Herramientas Especiales",
+      description: "Herramientas únicas diseñadas para aplicaciones e industrias específicas donde las herramientas estándar no son suficientes.",
       image: stockImages.specialtyTools
     }
   ];
@@ -59,11 +59,11 @@ export default function ProductsSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4 text-vessel-gray">
-            Our <span className="text-vessel-red">Product Categories</span>
+            Nuestras <span className="text-vessel-red">Categorías de Productos</span>
           </h2>
           <div className="w-20 h-1 bg-vessel-red mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg">
-            Discover our comprehensive range of professional-grade tools designed for precision and performance.
+            Descubre nuestra amplia gama de herramientas de grado profesional diseñadas para precisión y rendimiento.
           </p>
         </motion.div>
         
@@ -89,7 +89,7 @@ export default function ProductsSection() {
                 <h3 className="font-montserrat font-semibold text-xl mb-2 text-vessel-gray">{product.title}</h3>
                 <p className="text-gray-600 mb-4">{product.description}</p>
                 <a href="#contact" className="inline-block text-vessel-red font-montserrat font-medium hover:underline">
-                  Learn More →
+                  Más Información →
                 </a>
               </div>
             </motion.div>
@@ -107,7 +107,7 @@ export default function ProductsSection() {
             href="#contact" 
             className="inline-block bg-vessel-red hover:bg-red-700 text-white font-montserrat font-medium py-3 px-8 rounded-md transition duration-300"
           >
-            Request Product Information
+            Solicitar Información de Productos
           </a>
         </motion.div>
       </div>

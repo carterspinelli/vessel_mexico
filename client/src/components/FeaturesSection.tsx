@@ -12,26 +12,26 @@ export default function FeaturesSection() {
   const features: Feature[] = [
     {
       id: 1,
-      title: "Japanese Quality",
-      description: "Meticulously crafted following strict Japanese quality standards and testing procedures.",
+      title: "Calidad Japonesa",
+      description: "Fabricado meticulosamente siguiendo estrictos estándares japoneses de calidad y procedimientos de prueba.",
       icon: <CheckCircle className="w-10 h-10" />
     },
     {
       id: 2,
-      title: "Durability",
-      description: "Built to last with premium materials that withstand the most demanding conditions.",
+      title: "Durabilidad",
+      description: "Construido para durar con materiales premium que resisten las condiciones más exigentes.",
       icon: <Bolt className="w-10 h-10" />
     },
     {
       id: 3,
-      title: "Ergonomic Design",
-      description: "Comfortable grip and balanced weight distribution to reduce fatigue during extended use.",
+      title: "Diseño Ergonómico",
+      description: "Agarre cómodo y distribución equilibrada del peso para reducir la fatiga durante uso prolongado.",
       icon: <HandMetal className="w-10 h-10" />
     },
     {
       id: 4,
-      title: "Warranty Backed",
-      description: "Our confidence in our products is reflected in our comprehensive warranty program.",
+      title: "Garantía Respaldada",
+      description: "Nuestra confianza en nuestros productos se refleja en nuestro programa completo de garantía.",
       icon: <Award className="w-10 h-10" />
     }
   ];
@@ -47,11 +47,11 @@ export default function FeaturesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4 text-vessel-gray">
-            Why Choose <span className="text-vessel-red">Vessel Bolt</span>
+            Por Qué Elegir <span className="text-vessel-red">Vessel Bolt</span>
           </h2>
           <div className="w-20 h-1 bg-vessel-red mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg">
-            Our tools are designed with the professional in mind, offering unmatched quality and performance.
+            Nuestras herramientas están diseñadas pensando en el profesional, ofreciendo calidad y rendimiento inigualables.
           </p>
         </motion.div>
         

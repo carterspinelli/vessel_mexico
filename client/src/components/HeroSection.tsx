@@ -15,10 +15,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight">
-            Professional <span className="text-vessel-red">Quality Tools</span> for Every Job
+            Herramientas de <span className="text-vessel-red">Calidad Profesional</span> para Cada Trabajo
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Vessel México offers premium Japanese precision tools for professionals and enthusiasts.
+            Vessel México ofrece herramientas de precisión japonesas premium para profesionales y entusiastas.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <motion.a 
@@ -27,7 +27,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Explore Products
+              Explorar Productos
             </motion.a>
             <motion.a 
               href="#contact" 
@@ -35,7 +35,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact Us
+              Contáctanos
             </motion.a>
           </div>
         </motion.div>

@@ -13,11 +13,11 @@ import { toast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
+  name: z.string().min(2, { message: "El nombre debe tener al menos 2 caracteres." }),
+  email: z.string().email({ message: "Por favor, introduce un correo electrónico válido." }),
   phone: z.string().optional(),
-  subject: z.string().min(1, { message: "Please select a subject." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." })
+  subject: z.string().min(1, { message: "Por favor, selecciona un asunto." }),
+  message: z.string().min(10, { message: "El mensaje debe tener al menos 10 caracteres." })
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -42,17 +42,17 @@ export default function ContactSection() {
       await apiRequest("POST", "/api/contact", data);
       form.reset();
       toast({
-        title: "Message Sent",
-        description: "Thank you for your message! We'll get back to you soon.",
+        title: "Mensaje Enviado",
+        description: "¡Gracias por tu mensaje! Te responderemos pronto.",
         variant: "default",
       });
     } catch (error) {
       toast({
         title: "Error",
-        description: "There was an error sending your message. Please try again.",
+        description: "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.",
         variant: "destructive",
       });
-      console.error("Error sending message:", error);
+      console.error("Error al enviar mensaje:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -61,26 +61,26 @@ export default function ContactSection() {
   const contactInfo = [
     {
       id: 1,
-      title: "Address",
+      title: "Dirección",
       content: "Ciudad de México, México",
       icon: <MapPin className="h-5 w-5" />
     },
     {
       id: 2,
-      title: "Phone",
+      title: "Teléfono",
       content: "+52 (55) 1234-5678",
       icon: <Phone className="h-5 w-5" />
     },
     {
       id: 3,
-      title: "Email",
+      title: "Correo Electrónico",
       content: "info@vesselmx.com",
       icon: <Mail className="h-5 w-5" />
     },
     {
       id: 4,
-      title: "Business Hours",
-      content: "Monday - Friday: 9:00 AM - 6:00 PM",
+      title: "Horario de Atención",
+      content: "Lunes - Viernes: 9:00 AM - 6:00 PM",
       icon: <Clock className="h-5 w-5" />
     }
   ];
@@ -96,11 +96,11 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4">
-            Get in <span className="text-vessel-red">Touch</span>
+            Ponte en <span className="text-vessel-red">Contacto</span>
           </h2>
           <div className="w-20 h-1 bg-vessel-red mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg opacity-90">
-            Have questions about our products or need assistance? Reach out to our team.
+            ¿Tienes preguntas sobre nuestros productos o necesitas ayuda? Comunícate con nuestro equipo.
           </p>
         </motion.div>
         
@@ -111,7 +111,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="font-montserrat font-semibold text-2xl mb-6 text-white">Contact Information</h3>
+            <h3 className="font-montserrat font-semibold text-2xl mb-6 text-white">Información de Contacto</h3>
             
             <div className="space-y-6">
               {contactInfo.map((item) => (
@@ -128,14 +128,14 @@ export default function ContactSection() {
             </div>
             
             <div className="mt-8">
-              <h4 className="font-montserrat font-medium text-lg mb-4">Follow Us</h4>
+              <h4 className="font-montserrat font-medium text-lg mb-4">Síguenos</h4>
               <div className="flex space-x-4">
                 {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
                   <a 
                     key={social}
                     href="#" 
                     className="bg-vessel-gray hover:bg-vessel-red w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
-                    aria-label={`Follow us on ${social}`}
+                    aria-label={`Síguenos en ${social}`}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
@@ -152,7 +152,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="font-montserrat font-semibold text-2xl mb-6 text-white">Send Us a Message</h3>
+            <h3 className="font-montserrat font-semibold text-2xl mb-6 text-white">Envíanos un Mensaje</h3>
             
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -161,10 +161,10 @@ export default function ContactSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white opacity-90 font-montserrat">Full Name</FormLabel>
+                      <FormLabel className="text-white opacity-90 font-montserrat">Nombre Completo</FormLabel>
                       <FormControl>
                         <Input 
-                          placeholder="Your name" 
+                          placeholder="Tu nombre" 
                           className="bg-vessel-gray border-gray-700 text-white placeholder:text-gray-400"
                           {...field} 
                         />
@@ -179,10 +179,10 @@ export default function ContactSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white opacity-90 font-montserrat">Email Address</FormLabel>
+                      <FormLabel className="text-white opacity-90 font-montserrat">Correo Electrónico</FormLabel>
                       <FormControl>
                         <Input 
-                          placeholder="your.email@example.com" 
+                          placeholder="tu.correo@ejemplo.com" 
                           className="bg-vessel-gray border-gray-700 text-white placeholder:text-gray-400"
                           {...field} 
                         />
@@ -197,10 +197,10 @@ export default function ContactSection() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white opacity-90 font-montserrat">Phone Number</FormLabel>
+                      <FormLabel className="text-white opacity-90 font-montserrat">Número de Teléfono</FormLabel>
                       <FormControl>
                         <Input 
-                          placeholder="Your phone number" 
+                          placeholder="Tu número de teléfono" 
                           className="bg-vessel-gray border-gray-700 text-white placeholder:text-gray-400"
                           {...field} 
                         />
@@ -215,18 +215,18 @@ export default function ContactSection() {
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white opacity-90 font-montserrat">Subject</FormLabel>
+                      <FormLabel className="text-white opacity-90 font-montserrat">Asunto</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="bg-vessel-gray border-gray-700 text-white">
-                            <SelectValue placeholder="Select a subject" />
+                            <SelectValue placeholder="Selecciona un asunto" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="Product Inquiry">Product Inquiry</SelectItem>
-                          <SelectItem value="Support Request">Support Request</SelectItem>
-                          <SelectItem value="Distributor Information">Distributor Information</SelectItem>
-                          <SelectItem value="Other">Other</SelectItem>
+                          <SelectItem value="Product Inquiry">Consulta de Producto</SelectItem>
+                          <SelectItem value="Support Request">Solicitud de Soporte</SelectItem>
+                          <SelectItem value="Distributor Information">Información de Distribución</SelectItem>
+                          <SelectItem value="Other">Otro</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -239,10 +239,10 @@ export default function ContactSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white opacity-90 font-montserrat">Message</FormLabel>
+                      <FormLabel className="text-white opacity-90 font-montserrat">Mensaje</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="How can we help you?" 
+                          placeholder="¿Cómo podemos ayudarte?" 
                           className="bg-vessel-gray border-gray-700 text-white placeholder:text-gray-400"
                           rows={4}
                           {...field} 
@@ -258,7 +258,7 @@ export default function ContactSection() {
                   className="w-full bg-vessel-red hover:bg-red-700 text-white font-montserrat font-medium"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
                 </Button>
               </form>
             </Form>

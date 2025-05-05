@@ -13,11 +13,11 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4 text-vessel-gray">
-            About <span className="text-vessel-red">Vessel México</span>
+            Sobre <span className="text-vessel-red">Vessel México</span>
           </h2>
           <div className="w-20 h-1 bg-vessel-red mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg">
-            A subsidiary of the renowned Japanese tool manufacturer, bringing premium quality tools to the Mexican market.
+            Una subsidiaria del reconocido fabricante japonés de herramientas, trayendo herramientas de calidad premium al mercado mexicano.
           </p>
         </motion.div>
         
@@ -29,14 +29,14 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="font-montserrat font-semibold text-2xl mb-4 text-vessel-gray">Our Legacy of Excellence</h3>
-            <p className="mb-4">Since 1916, Vessel has been at the forefront of manufacturing high-quality tools and equipment. Our history of innovation and craftsmanship continues today with our expansion into Mexico.</p>
+            <h3 className="font-montserrat font-semibold text-2xl mb-4 text-vessel-gray">Nuestro Legado de Excelencia</h3>
+            <p className="mb-4">Desde 1916, Vessel ha estado a la vanguardia en la fabricación de herramientas y equipos de alta calidad. Nuestra historia de innovación y artesanía continúa hoy con nuestra expansión en México.</p>
             
-            <h3 className="font-montserrat font-semibold text-2xl mb-4 mt-8 text-vessel-gray">Japanese Precision</h3>
-            <p className="mb-4">Our tools are manufactured to meet the highest Japanese standards, ensuring precision, durability, and ergonomic design that professionals trust.</p>
+            <h3 className="font-montserrat font-semibold text-2xl mb-4 mt-8 text-vessel-gray">Precisión Japonesa</h3>
+            <p className="mb-4">Nuestras herramientas son fabricadas para cumplir con los más altos estándares japoneses, garantizando precisión, durabilidad y diseño ergonómico en los que los profesionales confían.</p>
             
-            <h3 className="font-montserrat font-semibold text-2xl mb-4 mt-8 text-vessel-gray">Our Mission</h3>
-            <p className="mb-4">We are committed to providing Mexican professionals with the finest tools that enhance workmanship, improve efficiency, and deliver outstanding results.</p>
+            <h3 className="font-montserrat font-semibold text-2xl mb-4 mt-8 text-vessel-gray">Nuestra Misión</h3>
+            <p className="mb-4">Estamos comprometidos a proporcionar a los profesionales mexicanos las mejores herramientas que mejoran la mano de obra, aumentan la eficiencia y entregan resultados sobresalientes.</p>
           </motion.div>
           
           <motion.div 
@@ -48,7 +48,7 @@ export default function AboutSection() {
           >
             <img 
               src={stockImages.workshop} 
-              alt="Modern tool workshop" 
+              alt="Taller de herramientas moderno" 
               className="rounded-lg shadow-xl w-full h-auto object-cover"
               loading="lazy"
             />

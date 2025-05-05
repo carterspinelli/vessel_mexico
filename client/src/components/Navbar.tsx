@@ -12,10 +12,10 @@ export default function Navbar({
   closeMobileMenu
 }: NavbarProps) {
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Products", href: "#products" },
-    { label: "Contact", href: "#contact" }
+    { label: "Inicio", href: "#home" },
+    { label: "Nosotros", href: "#about" },
+    { label: "Productos", href: "#products" },
+    { label: "Contacto", href: "#contact" }
   ];
 
   const handleNavClick = () => {
@@ -47,7 +47,7 @@ export default function Navbar({
         <button 
           className="md:hidden text-vessel-gray focus:outline-none"
           onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
+          aria-label="Alternar menú móvil"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
