@@ -31,7 +31,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
             <motion.a
               href="#products"
-              className="inline-block bg-vessel-red hover:bg-red-700 text-white font-montserrat font-medium py-3 px-10 transition-all duration-300 text-center border border-transparent"
+              className="inline-block bg-vessel-red hover:bg-red-700 text-white font-montserrat font-medium py-3 px-10 transition-all duration-300 text-center border border-transparent rounded-md"
               whileHover={{
                 y: -2,
                 boxShadow: "0 4px 12px rgba(228, 35, 19, 0.3)",
@@ -42,7 +42,7 @@ export default function HeroSection() {
             </motion.a>
             <motion.a
               href="#about"
-              className="inline-block bg-transparent hover:bg-white/10 text-white border border-white font-montserrat font-medium py-3 px-10 transition-all duration-300 text-center"
+              className="inline-block bg-transparent hover:bg-white/10 text-white border border-white font-montserrat font-medium py-3 px-10 transition-all duration-300 text-center rounded-md"
               whileHover={{
                 y: -2,
                 boxShadow: "0 4px 12px rgba(255, 255, 255, 0.1)",
