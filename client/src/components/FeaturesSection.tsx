@@ -111,7 +111,7 @@ const FeatureCard = ({
   return (
     <motion.div
       className={cn(
-        "flex flex-col py-10 px-6 relative group/feature border-gray-200 min-h-[300px]",
+        "flex flex-col py-10 px-8 relative group/feature border-gray-200 min-h-[300px]",
         "lg:border-r lg:border-b",
         // Add left border to first column items
         (index === 0 || index === 3) && "lg:border-l",
@@ -133,15 +133,15 @@ const FeatureCard = ({
       </div>
       
       {/* Title with hover effect */}
-      <div className="text-xl font-bold mb-4 relative z-10 px-6 font-montserrat">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1.5 rounded-tr-full rounded-br-full bg-gray-200 group-hover/feature:bg-vessel-red transition-all duration-300 origin-center" />
-        <span className="group-hover/feature:translate-x-3 transition duration-300 inline-block text-vessel-gray">
+      <div className="text-xl font-bold mb-4 relative z-10 px-0 font-montserrat">
+        <div className="absolute left-0 top-1 h-5 group-hover/feature:h-7 w-1.5 rounded-tr-full rounded-br-full bg-gray-200 group-hover/feature:bg-vessel-red hover:bg-vessel-red transition-all duration-300 origin-center ease-out" />
+        <span className="pl-6 group-hover/feature:pl-8 transition-all duration-300 inline-block text-vessel-gray">
           {title}
         </span>
       </div>
       
       {/* Description */}
-      <p className="text-gray-600 relative z-10 px-6 text-center group-hover/feature:text-gray-700 transition duration-300">
+      <p className="text-gray-600 relative z-10 px-0 text-left pl-6 group-hover/feature:text-gray-700 transition duration-300">
         {description}
       </p>
     </motion.div>
