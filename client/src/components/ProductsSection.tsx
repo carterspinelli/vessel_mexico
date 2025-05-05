@@ -12,38 +12,38 @@ export default function ProductsSection() {
   const products: Product[] = [
     {
       id: 1,
-      title: "Destornilladores de Precisión",
-      description: "Destornilladores de alta calidad diseñados para trabajos de precisión en electrónica, pequeños electrodomésticos y aplicaciones mecánicas detalladas.",
+      title: "HERRAMIENTAS MANUALES",
+      description: "Destornilladores, Llaves, Pelacables, y más.",
       image: stockImages.precisionScrewdrivers
     },
     {
       id: 2,
-      title: "Atornilladores de Impacto",
-      description: "Atornilladores de impacto potentes y eficientes, perfectos para construcción, carpintería y aplicaciones industriales.",
-      image: stockImages.impactDrivers
-    },
-    {
-      id: 3,
-      title: "Puntas Especializadas",
-      description: "Puntas especializadas para cada aplicación, incluyendo seguridad, torx, hexagonal y diseños personalizados para necesidades específicas de la industria.",
+      title: "PUNTAS / DADOS INDUSTRIALES",
+      description: "Puntas Industriales, dados, Portapuntas, y más.",
       image: stockImages.specialtyBits
     },
     {
+      id: 3,
+      title: "PUNTAS / DADOS / TALADROS DE CONSTRUCCIÓN",
+      description: "Puntas de Construcción, dados, Brocas / Portabrocas, y más.",
+      image: stockImages.impactDrivers
+    },
+    {
       id: 4,
-      title: "Herramientas ESD",
-      description: "Herramientas seguras contra descargas electrostáticas para fabricación de electrónica, reparación y otras aplicaciones sensibles.",
+      title: "DESTORNILLADORES ELÉCTRICOS",
+      description: "Destornilladores Eléctricos, y más.",
       image: stockImages.esdTools
     },
     {
       id: 5,
-      title: "Juegos de Herramientas",
-      description: "Juegos completos de herramientas diseñados para profesionales en diversas industrias, desde automotriz hasta mecánica de precisión.",
+      title: "HERRAMIENTAS NEUMÁTICAS",
+      description: "Destornilladores Neumáticos, Llaves de Impacto Neumáticas, y más.",
       image: stockImages.toolSets
     },
     {
       id: 6,
-      title: "Herramientas Especiales",
-      description: "Herramientas únicas diseñadas para aplicaciones e industrias específicas donde las herramientas estándar no son suficientes.",
+      title: "HERRAMIENTAS CON MOTOR DE GASOLINA",
+      description: "Llave de impacto a gasolina.",
       image: stockImages.specialtyTools
     }
   ];
