@@ -1,3 +1,4 @@
+
 import { Logo } from "../assets/Logo";
 
 export default function Footer() {
@@ -10,30 +11,30 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Logo className="h-12 mb-4" />
             <p className="opacity-80 mb-4">
-              Vessel México brings the finest Japanese professional tools to the Mexican market, delivering quality, precision, and reliability for every job.
+              Vessel México trae las mejores herramientas profesionales japonesas al mercado mexicano, ofreciendo calidad, precisión y confiabilidad para cada trabajo.
             </p>
             <p className="opacity-70 text-sm">
-              © {year} Vessel México. All rights reserved.
+              © {year} Vessel México. Todos los derechos reservados.
             </p>
           </div>
           
           <div>
-            <h4 className="font-montserrat font-semibold text-lg mb-4">Quick Links</h4>
+            <h4 className="font-montserrat font-semibold text-lg mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2 opacity-80">
-              <li><a href="#home" className="hover:text-vessel-red transition duration-300">Home</a></li>
-              <li><a href="#about" className="hover:text-vessel-red transition duration-300">About Us</a></li>
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Products</a></li>
-              <li><a href="#contact" className="hover:text-vessel-red transition duration-300">Contact</a></li>
+              <li><a href="#home" className="hover:text-vessel-red transition duration-300">Inicio</a></li>
+              <li><a href="#about" className="hover:text-vessel-red transition duration-300">Nosotros</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Productos</a></li>
+              <li><a href="#contact" className="hover:text-vessel-red transition duration-300">Contacto</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-montserrat font-semibold text-lg mb-4">Product Categories</h4>
+            <h4 className="font-montserrat font-semibold text-lg mb-4">Categorías de Productos</h4>
             <ul className="space-y-2 opacity-80">
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Precision Screwdrivers</a></li>
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Impact Drivers</a></li>
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Specialty Bits</a></li>
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Tool Sets</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Destornilladores de Precisión</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Destornilladores de Impacto</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Puntas Especiales</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Juegos de Herramientas</a></li>
             </ul>
           </div>
         </div>
