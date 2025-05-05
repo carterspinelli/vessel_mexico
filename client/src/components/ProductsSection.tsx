@@ -78,29 +78,21 @@ export default function ProductsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1 rounded-full bg-vessel-red bg-opacity-10 text-vessel-red text-sm font-medium mb-4">
+              <span className="inline-flex items-center px-4 py-1 rounded-full border border-white/20 bg-black text-white text-sm font-medium mb-4">
+                <span className="inline-block w-2 h-2 rounded-full bg-vessel-red mr-2 relative">
+                  <span className="absolute inset-0 w-full h-full rounded-full bg-vessel-red animate-ping opacity-75"></span>
+                </span>
                 Catálogo Vessel México
               </span>
               
               <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-vessel-gray overflow-hidden">
-                <span className="inline-block">
-                  <motion.span 
-                    className="inline-block"
-                    initial={{ y: "100%" }}
-                    whileInView={{ y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                  >
-                    Nuestras&nbsp;
-                  </motion.span>
-                </span>
                 <span className="inline-block text-vessel-red overflow-hidden">
                   <motion.span 
                     className="inline-block"
                     initial={{ y: "100%" }}
                     whileInView={{ y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
                   >
                     Categorías de Productos
                   </motion.span>
