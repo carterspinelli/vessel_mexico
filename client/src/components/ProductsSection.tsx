@@ -78,36 +78,18 @@ export default function ProductsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center px-4 py-1 rounded-full border border-white/20 bg-black text-white text-sm font-medium mb-4">
-                <span className="inline-block w-2 h-2 rounded-full bg-vessel-red mr-2 relative">
+              <span className="inline-flex items-center px-6 py-1.5 rounded-full border border-white/20 bg-black text-white text-sm mb-4">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-vessel-red mr-2 relative">
                   <span className="absolute inset-0 w-full h-full rounded-full bg-vessel-red animate-ping opacity-75"></span>
                 </span>
                 Catálogo Vessel México
               </span>
               
-              <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-vessel-gray overflow-hidden">
-                <span className="inline-block text-vessel-red overflow-hidden">
-                  <motion.span 
-                    className="inline-block"
-                    initial={{ y: "100%" }}
-                    whileInView={{ y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                  >
-                    Categorías de Productos
-                  </motion.span>
-                </span>
+              <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-black">
+                Categorías de Productos
               </h2>
               
-              <div className="w-24 h-1 bg-vessel-red mx-auto my-6 relative overflow-hidden">
-                <motion.div 
-                  className="absolute inset-0 bg-white"
-                  initial={{ x: 0 }}
-                  whileInView={{ x: "100%" }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                ></motion.div>
-              </div>
+              <div className="w-24 h-0.5 bg-vessel-red mx-auto mt-4 mb-8"></div>
             </motion.div>
             
             <motion.p 
