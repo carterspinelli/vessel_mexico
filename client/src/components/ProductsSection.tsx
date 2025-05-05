@@ -25,9 +25,9 @@ export default function ProductsSection() {
     },
     {
       id: 2,
-      title: "PUNTAS / DADOS INDUSTRIALES",
-      description: "Puntas Industriales, dados, Portapuntas, y más.",
-      image: industrialImg
+      title: "HERRAMIENTAS NEUMÁTICAS",
+      description: "Destornilladores Neumáticos, Llaves de Impacto Neumáticas, y más.",
+      image: neumaticImg
     },
     {
       id: 3,
@@ -43,9 +43,9 @@ export default function ProductsSection() {
     },
     {
       id: 5,
-      title: "HERRAMIENTAS NEUMÁTICAS",
-      description: "Destornilladores Neumáticos, Llaves de Impacto Neumáticas, y más.",
-      image: neumaticImg
+      title: "PUNTAS / DADOS INDUSTRIALES",
+      description: "Puntas Industriales, dados, Portapuntas, y más.",
+      image: industrialImg
     },
     {
       id: 6,

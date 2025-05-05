@@ -56,42 +56,105 @@ export default function AboutSection() {
           </motion.div>
         </div>
         
-        <motion.div
-          className="mt-12 bg-gray-50 p-8 rounded-sm shadow-sm"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3 className="font-montserrat font-semibold text-2xl mb-6 text-vessel-gray text-center">Historia de Vessel</h3>
+        <div className="mt-20 mb-10">
+          <motion.h3 
+            className="font-montserrat font-bold text-3xl mb-8 text-vessel-gray text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            Historia de <span className="text-vessel-red">Vessel</span>
+          </motion.h3>
           
-          <div className="space-y-6">
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/4 font-bold text-vessel-red mb-2 md:mb-0">1916</div>
-              <div className="md:w-3/4">Vessel fue fundada como el primer fabricante en volumen de destornilladores de Japón. La empresa implementó un sistema de producción en masa especializado en la fabricación de destornilladores para aplicaciones industriales.</div>
-            </div>
+          <div className="relative">
+            {/* Timeline vertical line */}
+            <div className="absolute left-[7px] md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-vessel-red bg-opacity-20"></div>
             
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/4 font-bold text-vessel-red mb-2 md:mb-0">1933</div>
-              <div className="md:w-3/4">La compañía comenzó a estampar sus productos con la marca "VESSEL", que significa un gran barco en inglés, como símbolo de su calidad superior.</div>
-            </div>
-            
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/4 font-bold text-vessel-red mb-2 md:mb-0">1954-1958</div>
-              <div className="md:w-3/4">Vessel comenzó la producción de puntas para herramientas neumáticas y lanzó su primer destornillador de impacto, ayudando a agilizar las operaciones en sitios de ensamblaje en todo el país.</div>
-            </div>
-            
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/4 font-bold text-vessel-red mb-2 md:mb-0">1967</div>
-              <div className="md:w-3/4">La empresa estableció los tres pilares de su negocio: destornilladores, puntas y herramientas neumáticas, incluyendo las llaves de impacto neumáticas.</div>
-            </div>
-            
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/4 font-bold text-vessel-red mb-2 md:mb-0">2016-Presente</div>
-              <div className="md:w-3/4">Vessel celebró el centenario de su fundación y estableció VESSEL TOOLS USA y VESSEL CHINA. Continúa expandiéndose globalmente, llegando ahora al mercado mexicano con herramientas de precisión y calidad.</div>
+            {/* Timeline items */}
+            <div className="space-y-16 relative">
+              {/* 1916 */}
+              <motion.div 
+                className="flex flex-col md:flex-row items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <div className="md:w-1/2 pl-8 md:pl-0 pr-4 md:pr-10 md:text-right pb-10 md:pb-0 relative">
+                  <div className="absolute left-[-9px] md:left-auto md:right-[-9px] top-0 h-5 w-5 rounded-full bg-vessel-red border-4 border-white z-10"></div>
+                  <h4 className="text-2xl font-semibold text-vessel-red mb-2">1916</h4>
+                  <p>Vessel fue fundada como el primer fabricante en volumen de destornilladores de Japón, implementando un sistema de producción en masa especializado.</p>
+                </div>
+                <div className="md:w-1/2 md:pl-10 md:mt-24 hidden md:block"></div>
+              </motion.div>
+              
+              {/* 1933 */}
+              <motion.div 
+                className="flex flex-col md:flex-row items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <div className="md:w-1/2 md:pr-10 hidden md:block"></div>
+                <div className="md:w-1/2 pl-8 md:pl-10 pb-10 md:pb-0 relative">
+                  <div className="absolute left-[-9px] top-0 h-5 w-5 rounded-full bg-vessel-red border-4 border-white z-10"></div>
+                  <h4 className="text-2xl font-semibold text-vessel-red mb-2">1933</h4>
+                  <p>La compañía comenzó a estampar sus productos con la marca "VESSEL", que significa un gran barco en inglés, como símbolo de su calidad superior.</p>
+                </div>
+              </motion.div>
+              
+              {/* 1954-1958 */}
+              <motion.div 
+                className="flex flex-col md:flex-row items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <div className="md:w-1/2 pl-8 md:pl-0 pr-4 md:pr-10 md:text-right pb-10 md:pb-0 relative">
+                  <div className="absolute left-[-9px] md:left-auto md:right-[-9px] top-0 h-5 w-5 rounded-full bg-vessel-red border-4 border-white z-10"></div>
+                  <h4 className="text-2xl font-semibold text-vessel-red mb-2">1954-1958</h4>
+                  <p>Vessel comenzó la producción de puntas para herramientas neumáticas y lanzó su primer destornillador de impacto, revolucionando operaciones industriales.</p>
+                </div>
+                <div className="md:w-1/2 md:pl-10 hidden md:block"></div>
+              </motion.div>
+              
+              {/* 1967 */}
+              <motion.div 
+                className="flex flex-col md:flex-row items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <div className="md:w-1/2 md:pr-10 hidden md:block"></div>
+                <div className="md:w-1/2 pl-8 md:pl-10 pb-10 md:pb-0 relative">
+                  <div className="absolute left-[-9px] top-0 h-5 w-5 rounded-full bg-vessel-red border-4 border-white z-10"></div>
+                  <h4 className="text-2xl font-semibold text-vessel-red mb-2">1967</h4>
+                  <p>La empresa estableció los tres pilares de su negocio: destornilladores, puntas y herramientas neumáticas, incluyendo las llaves de impacto neumáticas.</p>
+                </div>
+              </motion.div>
+              
+              {/* 2016-Presente */}
+              <motion.div 
+                className="flex flex-col md:flex-row items-start"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <div className="md:w-1/2 pl-8 md:pl-0 pr-4 md:pr-10 md:text-right relative">
+                  <div className="absolute left-[-9px] md:left-auto md:right-[-9px] top-0 h-5 w-5 rounded-full bg-vessel-red border-4 border-white z-10"></div>
+                  <h4 className="text-2xl font-semibold text-vessel-red mb-2">2016-Presente</h4>
+                  <p>Vessel celebró el centenario de su fundación y estableció VESSEL TOOLS USA y VESSEL CHINA, expandiéndose globalmente, incluyendo ahora en México con herramientas de precisión.</p>
+                </div>
+                <div className="md:w-1/2 md:pl-10 hidden md:block"></div>
+              </motion.div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
