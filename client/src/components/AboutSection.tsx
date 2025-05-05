@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { stockImages } from "../assets/stock-images";
+import Spline from "@splinetool/react-spline";
 
 export default function AboutSection() {
   return (
@@ -46,12 +47,12 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <img 
-              src={stockImages.workshop} 
-              alt="Taller de herramientas moderno" 
-              className="rounded-sm shadow-xl w-full h-auto object-cover"
-              loading="lazy"
-            />
+            <div className="rounded-sm shadow-xl w-full h-96 overflow-hidden">
+              <Spline 
+                scene="https://prod.spline.design/NaZESW1HcPKKzlqB/scene.splinecode" 
+                style={{ width: '100%', height: '100%' }}
+              />
+            </div>
           </motion.div>
         </div>
         
