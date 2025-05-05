@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { Logo } from "../assets/Logo";
 import toolsHeroImage from "../assets/tools-hero.png";
 
 export default function HeroSection() {
   return (
     <section 
       id="home" 
-      className="pt-28 pb-28 relative overflow-hidden"
+      className="pt-40 pb-40 relative overflow-hidden"
     >
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
@@ -15,7 +14,7 @@ export default function HeroSection() {
           alt="Professional Tools" 
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
       </div>
       
       <div className="container mx-auto px-4 flex flex-col items-center text-center relative z-10">
@@ -25,12 +24,11 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Logo className="h-20 mb-10 mx-auto" />
           <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight text-white">
             Herramientas de <span className="text-vessel-red">Precisión Japonesa</span>
           </h1>
           <p className="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto">
-            Trayendo herramientas de calidad premium diseñadas con precisión japonesa para los profesionales de México.
+            Desde 1916, Vessel ha sido líder en herramientas de fijación, ofreciendo calidad y precisión excepcionales para profesionales.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
             <motion.a 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, Bolt, HandMetal, Award } from "lucide-react";
+import { CheckCircle, Bolt, HandMetal, Award, Lightbulb, ShieldCheck } from "lucide-react";
 
 interface Feature {
   id: number;
@@ -12,32 +12,44 @@ export default function FeaturesSection() {
   const features: Feature[] = [
     {
       id: 1,
-      title: "Calidad Japonesa",
-      description: "Fabricado meticulosamente siguiendo estrictos estándares japoneses de calidad y procedimientos de prueba.",
+      title: "Calidad Superior",
+      description: "Los productos Vessel cumplen con requisitos estrictos de calidad como herramientas profesionales, respaldados por más de 100 años de historia.",
       icon: <CheckCircle className="w-10 h-10" />
     },
     {
       id: 2,
-      title: "Durabilidad",
-      description: "Construido para durar con materiales premium que resisten las condiciones más exigentes.",
-      icon: <Bolt className="w-10 h-10" />
+      title: "Innovación",
+      description: "Nuestra misión es desarrollar nuevos productos y traerlos al mercado más rápido que otras empresas, mediante tecnologías avanzadas.",
+      icon: <Lightbulb className="w-10 h-10" />
     },
     {
       id: 3,
       title: "Diseño Ergonómico",
-      description: "Agarre cómodo y distribución equilibrada del peso para reducir la fatiga durante uso prolongado.",
+      description: "Creamos productos que todos los clientes encontrarán cómodos, desde usuarios principiantes hasta profesionales que trabajan con nuestras herramientas todos los días.",
       icon: <HandMetal className="w-10 h-10" />
     },
     {
       id: 4,
+      title: "Durabilidad",
+      description: "Construido para durar con materiales premium que resisten las condiciones más exigentes del entorno de trabajo profesional.",
+      icon: <Bolt className="w-10 h-10" />
+    },
+    {
+      id: 5,
+      title: "Seguridad",
+      description: "Vessel diseña productos para garantizar la salud y seguridad de los usuarios mediante rigurosas evaluaciones y pruebas de seguridad.",
+      icon: <ShieldCheck className="w-10 h-10" />
+    },
+    {
+      id: 6,
       title: "Garantía Respaldada",
-      description: "Nuestra confianza en nuestros productos se refleja en nuestro programa completo de garantía.",
+      description: "Nuestro enfoque intransigente de fabricación y artesanía y nuestro compromiso con la calidad respaldan cada herramienta que fabricamos.",
       icon: <Award className="w-10 h-10" />
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -47,19 +59,19 @@ export default function FeaturesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4 text-vessel-gray">
-            Por Qué Elegir <span className="text-vessel-red">Vessel Bolt</span>
+            Por Qué Elegir <span className="text-vessel-red">Vessel</span>
           </h2>
           <div className="w-20 h-1 bg-vessel-red mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg">
-            Nuestras herramientas están diseñadas pensando en el profesional, ofreciendo calidad y rendimiento inigualables.
+            Nuestros valores fundamentales guían cada aspecto del diseño y fabricación de herramientas, ofreciendo calidad y rendimiento inigualables para profesionales.
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div 
               key={feature.id}
-              className="text-center p-6 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition duration-300"
+              className="text-center p-6 border border-gray-200 rounded-sm bg-white shadow-sm hover:shadow-md transition duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
