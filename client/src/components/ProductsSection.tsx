@@ -78,18 +78,19 @@ export default function ProductsSection() {
           {products.map((product, index) => (
             <motion.div 
               key={product.id}
-              className="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="bg-white overflow-hidden shadow-md transform transition duration-300 hover:shadow-lg hover:-translate-y-1"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="h-56 overflow-hidden bg-gray-50 flex items-center justify-center">
+              <div className="aspect-[16/10] overflow-hidden bg-white flex items-center justify-center">
                 <img 
                   src={product.image} 
                   alt={product.title} 
-                  className="w-full h-full object-contain p-2"
+                  className="w-full h-full object-contain"
                   loading="lazy"
+                  style={{ objectFit: 'contain', maxHeight: '100%', maxWidth: '100%' }}
                 />
               </div>
               <div className="p-6">
