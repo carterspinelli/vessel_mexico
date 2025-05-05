@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { IconBrandHipchat, IconCertificate, IconHammer, IconHeartHandshake, IconRecycle, IconRulerMeasure, IconSettings, IconTools } from "@tabler/icons-react";
+import { CheckCircle, Bolt, HandMetal, Award, Lightbulb, ShieldCheck } from "lucide-react";
 
 interface Feature {
   id: number;
@@ -12,51 +12,39 @@ export default function FeaturesSection() {
   const features: Feature[] = [
     {
       id: 1,
-      title: "Precisión japonesa",
-      description: "Herramientas fabricadas bajo estrictos estándares de calidad para garantizar precisión y durabilidad.",
-      icon: <IconRulerMeasure className="w-10 h-10" />
+      title: "Calidad Superior",
+      description: "Los productos Vessel cumplen con requisitos estrictos de calidad como herramientas profesionales, respaldados por más de 100 años de historia.",
+      icon: <CheckCircle className="w-10 h-10" />
     },
     {
       id: 2,
-      title: "Innovación Constante",
-      description: "Mejoramos continuamente nuestros productos incorporando las últimas tecnologías y materiales.",
-      icon: <IconSettings className="w-10 h-10" />
+      title: "Innovación",
+      description: "Nuestra misión es desarrollar nuevos productos y traerlos al mercado más rápido que otras empresas, mediante tecnologías avanzadas.",
+      icon: <Lightbulb className="w-10 h-10" />
     },
     {
       id: 3,
-      title: "Desde 1916",
-      description: "Más de 100 años de experiencia y tradición en la fabricación de herramientas profesionales.",
-      icon: <IconCertificate className="w-10 h-10" />
+      title: "Diseño Ergonómico",
+      description: "Creamos productos que todos los clientes encontrarán cómodos, desde usuarios principiantes hasta profesionales que trabajan con nuestras herramientas todos los días.",
+      icon: <HandMetal className="w-10 h-10" />
     },
     {
       id: 4,
-      title: "Garantía Superior",
-      description: "Respaldamos nuestros productos con garantía y servicio postventa de primer nivel.",
-      icon: <IconHeartHandshake className="w-10 h-10" />
+      title: "Durabilidad",
+      description: "Construido para durar con materiales premium que resisten las condiciones más exigentes del entorno de trabajo profesional.",
+      icon: <Bolt className="w-10 h-10" />
     },
     {
       id: 5,
-      title: "Diseño Ergonómico",
-      description: "Herramientas diseñadas pensando en el profesional, con mangos ergonómicos y materiales que reducen la fatiga.",
-      icon: <IconHammer className="w-10 h-10" />
+      title: "Seguridad",
+      description: "Vessel diseña productos para garantizar la salud y seguridad de los usuarios mediante rigurosas evaluaciones y pruebas de seguridad.",
+      icon: <ShieldCheck className="w-10 h-10" />
     },
     {
       id: 6,
-      title: "Soporte Técnico",
-      description: "Equipo de expertos disponible para brindar asesoramiento técnico y resolver cualquier consulta.",
-      icon: <IconBrandHipchat className="w-10 h-10" />
-    },
-    {
-      id: 7,
-      title: "Materiales Sostenibles",
-      description: "Comprometidos con el medio ambiente, utilizamos materiales y procesos de producción sostenibles.",
-      icon: <IconRecycle className="w-10 h-10" />
-    },
-    {
-      id: 8,
-      title: "Versatilidad Profesional",
-      description: "Soluciones para cada necesidad: desde herramientas manuales hasta sistemas eléctricos especializados.",
-      icon: <IconTools className="w-10 h-10" />
+      title: "Garantía Respaldada",
+      description: "Nuestro enfoque intransigente de fabricación y artesanía y nuestro compromiso con la calidad respaldan cada herramienta que fabricamos.",
+      icon: <Award className="w-10 h-10" />
     }
   ];
 
@@ -79,7 +67,7 @@ export default function FeaturesSection() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div 
               key={feature.id}
