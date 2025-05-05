@@ -49,11 +49,10 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="relative pb-16">
-          {/* Decorative background element */}
-          <div className="absolute top-10 left-0 right-0 h-40 bg-vessel-red opacity-[0.02] transform -skew-y-2"></div>
+          {/* No decorative background element */}
         
           <motion.div 
             className="text-center relative z-10"
@@ -62,12 +61,10 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-block mb-2 bg-vessel-red/10 text-vessel-red px-4 py-1 rounded-full">
-              <span className="text-sm font-medium">Filosofía Vessel</span>
-            </div>
+
             
             <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-6 text-vessel-gray">
-              Por Qué Elegir <span className="text-vessel-red">Vessel</span>
+              ¿Por qué elegir <span className="text-vessel-red">Vessel</span>?
               <motion.div 
                 className="h-1 w-20 bg-vessel-red mx-auto mt-4"
                 initial={{ width: 0, opacity: 0 }}
@@ -77,7 +74,7 @@ export default function FeaturesSection() {
               ></motion.div>
             </h2>
             
-            <p className="max-w-3xl mx-auto text-lg">
+            <p className="max-w-3xl mx-auto text-lg text-gray-600">
               Nuestros valores fundamentales guían cada aspecto del diseño y fabricación de herramientas, ofreciendo calidad y rendimiento inigualables para profesionales.
             </p>
           </motion.div>
