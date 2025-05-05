@@ -1,66 +1,71 @@
 import { motion } from "framer-motion";
 import ScrewdriverAnimation from "./ui/screwdriver-animation";
+import { Logo } from "../assets/Logo";
 
 export default function HeroSection() {
   return (
     <section 
       id="home" 
-      className="pt-28 pb-20 bg-gradient-to-r from-vessel-black to-vessel-gray text-white relative overflow-hidden"
+      className="pt-28 pb-20 bg-white text-vessel-gray relative overflow-hidden"
     >
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
+      <div className="container mx-auto px-4 flex flex-col items-center text-center relative z-10">
         <motion.div 
-          className="md:w-1/2 mb-10 md:mb-0"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          className="max-w-3xl mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
+          <Logo className="h-16 mb-8 mx-auto" />
           <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight">
-            Herramientas de <span className="text-vessel-red">Calidad Profesional</span> para Cada Trabajo
+            Herramientas de <span className="text-vessel-red">Precisión Japonesa</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 opacity-90">
-            Vessel México ofrece herramientas de precisión japonesas premium para profesionales y entusiastas.
+          <p className="text-lg md:text-xl mb-10 opacity-80 max-w-2xl mx-auto">
+            Trayendo herramientas de calidad premium diseñadas con precisión japonesa para los profesionales de México.
           </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
             <motion.a 
               href="#products" 
-              className="inline-block bg-vessel-red hover:bg-red-700 text-white font-montserrat font-medium py-3 px-8 rounded-md transition duration-300 text-center"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-vessel-red hover:bg-red-700 text-white font-montserrat font-medium py-3 px-8 rounded-sm transition-colors duration-300 text-center"
+              whileHover={{ y: -2 }}
+              whileTap={{ y: 1 }}
             >
               Explorar Productos
             </motion.a>
             <motion.a 
-              href="#contact" 
-              className="inline-block bg-transparent hover:bg-white/10 text-white border-2 border-white font-montserrat font-medium py-3 px-8 rounded-md transition duration-300 text-center"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              href="#about" 
+              className="inline-block bg-white hover:bg-gray-100 text-vessel-gray border border-gray-300 font-montserrat font-medium py-3 px-8 rounded-sm transition-colors duration-300 text-center"
+              whileHover={{ y: -2 }}
+              whileTap={{ y: 1 }}
             >
-              Contáctanos
+              Conocer Más
             </motion.a>
           </div>
         </motion.div>
         
         <motion.div 
-          className="md:w-1/2 flex justify-center"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex justify-center mt-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
           <ScrewdriverAnimation />
         </motion.div>
       </div>
       
-      {/* Background pattern */}
-      <div className="absolute inset-0 z-0 opacity-10">
-        <div 
-          className="absolute inset-0" 
-          style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')", 
-            backgroundSize: "cover", 
-            backgroundPosition: "center"
-          }}
-        ></div>
-      </div>
+      {/* Simple decorative elements */}
+      <div className="absolute top-0 inset-x-0 h-1 bg-vessel-red"></div>
+      <motion.div 
+        className="absolute right-0 bottom-0 w-96 h-96 bg-gray-100 rounded-full -mr-48 -mb-32"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      ></motion.div>
+      <motion.div 
+        className="absolute left-0 top-1/2 w-64 h-64 bg-gray-100 rounded-full -ml-32 -mt-32"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.3 }}
+        transition={{ duration: 1, delay: 0.7 }}
+      ></motion.div>
     </section>
   );
 }
