@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { stockImages } from "../assets/stock-images";
+
+// Import product images
+import manualesImg from "../assets/products-new/manuales.jpg";
+import industrialImg from "../assets/products-new/industrial.jpg";
+import constructionImg from "../assets/products-new/construction.jpg";
+import electricImg from "../assets/products-new/electric.jpg";
+import neumaticImg from "../assets/products-new/neumatic.jpg";
+import gasolineImg from "../assets/products-new/gasoline.webp";
 
 interface Product {
   id: number;
@@ -14,37 +21,37 @@ export default function ProductsSection() {
       id: 1,
       title: "HERRAMIENTAS MANUALES",
       description: "Destornilladores, Llaves, Pelacables, y más.",
-      image: stockImages.precisionScrewdrivers
+      image: manualesImg
     },
     {
       id: 2,
       title: "PUNTAS / DADOS INDUSTRIALES",
       description: "Puntas Industriales, dados, Portapuntas, y más.",
-      image: stockImages.specialtyBits
+      image: industrialImg
     },
     {
       id: 3,
       title: "PUNTAS / DADOS / TALADROS DE CONSTRUCCIÓN",
       description: "Puntas de Construcción, dados, Brocas / Portabrocas, y más.",
-      image: stockImages.impactDrivers
+      image: constructionImg
     },
     {
       id: 4,
       title: "DESTORNILLADORES ELÉCTRICOS",
       description: "Destornilladores Eléctricos, y más.",
-      image: stockImages.esdTools
+      image: electricImg
     },
     {
       id: 5,
       title: "HERRAMIENTAS NEUMÁTICAS",
       description: "Destornilladores Neumáticos, Llaves de Impacto Neumáticas, y más.",
-      image: stockImages.toolSets
+      image: neumaticImg
     },
     {
       id: 6,
-      title: "HERRAMIENTAS CON MOTOR DE GASOLINA",
+      title: "HERRAMIENTAS CON MOTOR A GASOLINA",
       description: "Llave de impacto a gasolina.",
-      image: stockImages.specialtyTools
+      image: gasolineImg
     }
   ];
 
@@ -77,20 +84,17 @@ export default function ProductsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-56 overflow-hidden bg-gray-50 flex items-center justify-center">
                 <img 
                   src={product.image} 
                   alt={product.title} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-2"
                   loading="lazy"
                 />
               </div>
               <div className="p-6">
                 <h3 className="font-montserrat font-semibold text-xl mb-2 text-vessel-gray">{product.title}</h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <a href="#contact" className="inline-block text-vessel-red font-montserrat font-medium hover:underline">
-                  Más Información →
-                </a>
+                <p className="text-gray-600">{product.description}</p>
               </div>
             </motion.div>
           ))}
