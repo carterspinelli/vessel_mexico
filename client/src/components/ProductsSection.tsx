@@ -58,12 +58,10 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section id="products" className="py-20 bg-gradient-to-b from-gray-50 to-vessel-light-gray">
+    <section id="products" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="relative z-10 pb-20">
-          {/* Abstract decorative elements */}
-          <div className="absolute top-0 left-20 w-48 h-48 bg-vessel-red opacity-[0.02] rounded-full blur-xl"></div>
-          <div className="absolute bottom-0 right-20 w-64 h-64 bg-vessel-red opacity-[0.03] rounded-full blur-xl"></div>
+          {/* No decorative elements */}
           
           <motion.div
             className="text-center relative"
@@ -78,8 +76,8 @@ export default function ProductsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center px-6 py-1.5 rounded-full border border-white/20 bg-black text-white text-sm mb-4">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-vessel-red mr-2 relative">
+              <span className="inline-flex items-center px-8 py-2.5 rounded-full border border-gray-300 bg-white text-gray-600 text-sm font-normal mb-6">
+                <span className="inline-block w-2 h-2 rounded-full bg-vessel-red mr-3 relative">
                   <span className="absolute inset-0 w-full h-full rounded-full bg-vessel-red animate-ping opacity-75"></span>
                 </span>
                 Catálogo Vessel México
