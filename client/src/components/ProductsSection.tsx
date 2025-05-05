@@ -131,29 +131,27 @@ export default function ProductsSection() {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                    className="object-contain transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                     style={{
-                      objectFit: "contain",
-                      maxHeight: "100%",
+                      maxHeight: "160px",
                       maxWidth: "100%",
                     }}
                   />
                 </div>
               </div>
               
-              <div className="p-6 relative z-10 bg-white">
+              <div className="p-6 relative z-10 bg-white overflow-hidden">
                 <h3 className="font-montserrat font-semibold text-lg md:text-xl text-vessel-gray group-hover:text-vessel-red transition-colors duration-300">
                   {product.title}
                 </h3>
                 
                 <div className="w-12 h-0.5 bg-vessel-red mt-3 mb-3 transform origin-left scale-x-0 group-hover:scale-x-100 transition-all duration-500 delay-100"></div>
                 
-                <p className="text-gray-600 text-sm md:text-base">
+                <p className="text-gray-600 text-sm md:text-base mb-0">
                   {product.description}
                 </p>
-                
-                <div className="absolute -bottom-2 right-6 transform rotate-45 w-4 h-4 border-t-2 border-r-2 border-vessel-red opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
+
               </div>
             </motion.div>
           ))}
