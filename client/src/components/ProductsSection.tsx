@@ -81,22 +81,26 @@ export default function ProductsSection() {
           {products.map((product, index) => (
             <motion.div
               key={product.id}
-              className="bg-white rounded-sm overflow-hidden shadow-lg transform transition duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="bg-white overflow-hidden shadow-md transform transition duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="h-64 overflow-hidden bg-gray-50 flex items-center justify-center p-4">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="max-w-full max-h-full object-contain"
-                  loading="lazy"
-                />
+              <div className="relative">
+                <div className="h-64 overflow-hidden bg-gray-100 p-2">
+                  <div className="h-full flex items-center justify-center">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-auto h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="p-6 border-t border-gray-100">
-                <h3 className="font-montserrat font-semibold text-xl mb-3 text-vessel-gray">
+                <h3 className="font-montserrat font-semibold text-lg md:text-xl mb-3 text-vessel-gray">
                   {product.title}
                 </h3>
                 <p className="text-gray-600 mb-4 text-sm">{product.description}</p>
