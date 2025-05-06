@@ -49,7 +49,7 @@ export default function AboutSection() {
           >
             <div className="rounded-sm shadow-xl w-full h-96 overflow-hidden">
               <Spline 
-                scene="https://prod.spline.design/NaZESW1HcPKKzlqB/scene.splinecode" 
+                scene="https://prod.spline.design/KrH4DdCLMlxkt-Sl/scene.splinecode" 
                 style={{ width: '100%', height: '100%' }}
               />
             </div>
