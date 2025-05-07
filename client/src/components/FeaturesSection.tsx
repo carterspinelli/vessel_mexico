@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, Bolt, HandMetal, Award, Lightbulb, ShieldCheck } from "lucide-react";
+import { CheckCircle, Bolt, Award, Lightbulb, ShieldCheck, Box } from "lucide-react";
 
 interface Feature {
   id: number;
@@ -26,7 +26,7 @@ export default function FeaturesSection() {
       id: 3,
       title: "Diseño Ergonómico",
       description: "Diseñamos herramientas cómodas y fáciles de usar para todos, desde principiantes hasta profesionales que las utilizan diariamente.",
-      icon: <HandMetal className="w-10 h-10" />
+      icon: <Box className="w-10 h-10" />
     },
     {
       id: 4,
@@ -101,8 +101,7 @@ export default function FeaturesSection() {
                       {feature.icon}
                     </div>
                   </div>
-                  {/* Small accent dot */}
-                  <div className="absolute w-3 h-3 bg-vessel-red rounded-full -right-1 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  {/* Removed the accent dot as requested */}
                 </div>
                 
                 <h3 className="font-montserrat font-semibold text-xl mb-3 text-vessel-gray group-hover:text-vessel-red transition-colors duration-300">
