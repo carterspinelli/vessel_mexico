@@ -23,7 +23,8 @@ const resources = [
   'GTN20_01.jpg',
   'GTNL30.jpg',
   'GTNS20A.jpg',
-  'GTNS30A.jpg'
+  'GTNS30A.jpg',
+  'tab_logo.png' // Favicon para la pestaña del navegador
 ];
 
 // Copiar cada recurso
@@ -34,7 +35,14 @@ resources.forEach(resource => {
   try {
     if (fs.existsSync(sourceFile)) {
       fs.copyFileSync(sourceFile, targetFile);
-      console.log(`✅ Copiado: ${resource}`);
+      console.log(`✅ Copiado: ${resource} a ${targetDir}`);
+      
+      // Copiar el favicon también directamente al directorio public
+      if (resource === 'tab_logo.png') {
+        const publicFile = path.join(__dirname, 'client/public', resource);
+        fs.copyFileSync(sourceFile, publicFile);
+        console.log(`✅ Copiado favicon: ${resource} a client/public/`);
+      }
     } else {
       console.log(`❌ Archivo de origen no encontrado: ${sourceFile}`);
     }
