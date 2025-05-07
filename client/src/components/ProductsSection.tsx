@@ -84,7 +84,7 @@ export default function ProductsSection() {
               </span>
               
               <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl mb-4 text-black">
-                Categorías de Productos
+                Más Productos
               </h2>
               
               <div className="w-24 h-0.5 bg-vessel-red mx-auto mt-4 mb-8"></div>

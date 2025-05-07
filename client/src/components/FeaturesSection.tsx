@@ -13,19 +13,19 @@ export default function FeaturesSection() {
     {
       id: 1,
       title: "Calidad Superior",
-      description: "Los productos Vessel cumplen con requisitos estrictos de calidad como herramientas profesionales, respaldados por más de 100 años de historia.",
+      description: "Los productos Vessel cumplen con requisitos estrictos de calidad como herramientas profesionales, respaldados por más de 100 años de experiencia.",
       icon: <CheckCircle className="w-10 h-10" />
     },
     {
       id: 2,
       title: "Innovación",
-      description: "Nuestra misión es desarrollar nuevos productos y traerlos al mercado más rápido que otras empresas, mediante tecnologías avanzadas.",
+      description: "Creamos productos excepcionales con tecnologías avanzadas que establecen nuevos estándares y satisfacen las necesidades reales de nuestros clientes.",
       icon: <Lightbulb className="w-10 h-10" />
     },
     {
       id: 3,
       title: "Diseño Ergonómico",
-      description: "Creamos productos que todos los clientes encontrarán cómodos, desde usuarios principiantes hasta profesionales que trabajan con nuestras herramientas todos los días.",
+      description: "Diseñamos herramientas cómodas y fáciles de usar para todos, desde principiantes hasta profesionales que las utilizan diariamente.",
       icon: <HandMetal className="w-10 h-10" />
     },
     {
@@ -43,7 +43,7 @@ export default function FeaturesSection() {
     {
       id: 6,
       title: "Garantía Respaldada",
-      description: "Nuestro enfoque intransigente de fabricación y artesanía y nuestro compromiso con la calidad respaldan cada herramienta que fabricamos.",
+      description: "Nuestro enfoque en fabricación y nuestro compromiso con la calidad respaldan cada una de nuestras herramientas.",
       icon: <Award className="w-10 h-10" />
     }
   ];

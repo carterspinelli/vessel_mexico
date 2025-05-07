@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import ProductsSection from "./ProductsSection";
+import FeaturedProductsSection from "./FeaturedProductsSection";
 import FeaturesSection from "./FeaturesSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
@@ -38,6 +39,7 @@ export default function Layout() {
       />
       <main>
         <HeroSection />
+        <FeaturedProductsSection />
         <AboutSection />
         <ProductsSection />
         <FeaturesSection />
