@@ -36,6 +36,12 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
    ```
    Este script comprobará que todos los archivos y recursos necesarios estén en su lugar.
 
+5. Verifica que el puerto necesario esté disponible:
+   ```bash
+   node check-ports.js
+   ```
+   Este script verificará si el puerto 5000 está disponible y te proporcionará instrucciones si necesitas liberarlo.
+
 ## Ejecución del proyecto
 
 ### Para usuarios de macOS/Linux
@@ -63,6 +69,23 @@ Estos comandos iniciarán:
 - Un servidor de desarrollo Vite para el frontend
 
 Abre tu navegador y visita: `http://localhost:5000` para ver la aplicación.
+
+### Solución de problemas comunes
+
+#### Error: "address already in use"
+
+Si al iniciar el servidor recibes un error indicando que el puerto 5000 ya está en uso, puedes solucionarlo con el siguiente comando:
+
+```bash
+# En Linux/macOS
+npx kill-port 5000
+
+# En Windows (Command Prompt)
+FOR /F "tokens=5" %P IN ('netstat -ano ^| findstr :5000 ^| findstr LISTENING') DO taskkill /F /PID %P
+
+# En Windows (PowerShell)
+Stop-Process -Id (Get-NetTCPConnection -LocalPort 5000).OwningProcess -Force
+```
 
 ## Estructura del proyecto
 
