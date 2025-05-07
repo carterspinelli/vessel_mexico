@@ -135,4 +135,4 @@ Stop-Process -Id (Get-NetTCPConnection -LocalPort 5000).OwningProcess -Force
 ## Contacto
 
 Si tienes alguna pregunta o problema con la instalación, por favor contacta a:
-[Tu información de contacto]
+contacto@thr3e.dev
