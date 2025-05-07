@@ -145,8 +145,6 @@ export default function FeaturedProductsSection() {
                   <div className="mt-auto">
                     <div className="w-12 h-0.5 bg-vessel-red mb-4 transform origin-left scale-x-0 group-hover:scale-x-100 transition-all duration-500"></div>
                     
-                    <p className="text-xs text-gray-500 mb-2">Código de producto: {product.codeNo}</p>
-                    
                     <a 
                       href="#contact" 
                       className="inline-flex items-center text-vessel-red font-medium text-sm hover:underline"

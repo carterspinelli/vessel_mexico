@@ -31,10 +31,10 @@ export default function Footer() {
           <div>
             <h4 className="font-montserrat font-semibold text-lg mb-4">Categorías de Productos</h4>
             <ul className="space-y-2 opacity-80">
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Destornilladores de Precisión</a></li>
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Destornilladores de Impacto</a></li>
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Puntas Especiales</a></li>
-              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Juegos de Herramientas</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Herramientas Manuales</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Puntas y Dados Industriales</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Herramientas Neumáticas</a></li>
+              <li><a href="#products" className="hover:text-vessel-red transition duration-300">Destornilladores Eléctricos</a></li>
             </ul>
           </div>
         </div>
