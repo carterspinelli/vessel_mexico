@@ -6,9 +6,12 @@
 import { exec } from 'child_process';
 import { platform } from 'os';
 
-const PORT = 5000;
+// Determinar si estamos en Replit o en local
+const isReplit = process.env.REPL_ID !== undefined;
+const PORT = isReplit ? 5000 : 3000;
 const isWindows = platform() === 'win32';
 
+console.log(`Entorno detectado: ${isReplit ? 'Replit' : 'Desarrollo local'}`);
 console.log(`🔍 Verificando si el puerto ${PORT} está disponible...`);
 
 if (isWindows) {

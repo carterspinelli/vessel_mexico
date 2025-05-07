@@ -65,25 +65,35 @@ $env:NODE_ENV="development"; tsx server/index.ts
 ```
 
 Estos comandos iniciarán:
-- Un servidor Express en el puerto 5000 para el backend
+- Un servidor Express en el puerto 3000 para el backend (en desarrollo local)
+- Un servidor Express en el puerto 5000 para el backend (en Replit)
 - Un servidor de desarrollo Vite para el frontend
 
-Abre tu navegador y visita: `http://localhost:5000` para ver la aplicación.
+Abre tu navegador y visita:
+- Desarrollo local: `http://localhost:3000`
+- En Replit: La aplicación se ejecutará en el puerto 5000
 
 ### Solución de problemas comunes
 
 #### Error: "address already in use"
 
-Si al iniciar el servidor recibes un error indicando que el puerto 5000 ya está en uso, puedes solucionarlo con el siguiente comando:
+Si al iniciar el servidor recibes un error indicando que el puerto ya está en uso, puedes solucionarlo con el siguiente comando:
 
 ```bash
 # En Linux/macOS
-npx kill-port 5000
+npx kill-port 3000   # Para entorno local
+npx kill-port 5000   # Para entorno Replit
 
 # En Windows (Command Prompt)
+# Para puerto 3000 (local)
+FOR /F "tokens=5" %P IN ('netstat -ano ^| findstr :3000 ^| findstr LISTENING') DO taskkill /F /PID %P
+# Para puerto 5000 (Replit)
 FOR /F "tokens=5" %P IN ('netstat -ano ^| findstr :5000 ^| findstr LISTENING') DO taskkill /F /PID %P
 
 # En Windows (PowerShell)
+# Para puerto 3000 (local)
+Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force
+# Para puerto 5000 (Replit)
 Stop-Process -Id (Get-NetTCPConnection -LocalPort 5000).OwningProcess -Force
 ```
 
