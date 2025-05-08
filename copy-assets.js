@@ -46,16 +46,16 @@ resources.forEach(resource => {
       }
       
       // Copiar imagen de Open Graph a todas las ubicaciones necesarias
-      if (resource === 'open_graph_vessel.png') {
+      if (resource === 'vessel_mx_opengraph_v01@2x.jpg') {
         // 1. Carpeta images para compatibilidad general
         const imagesDir = path.join(__dirname, 'client/public/images');
         if (!fs.existsSync(imagesDir)) {
           fs.mkdirSync(imagesDir, { recursive: true });
           console.log(`✅ Directorio creado: ${imagesDir}`);
         }
-        const publicImagesFile = path.join(imagesDir, resource);
+        const publicImagesFile = path.join(imagesDir, 'open_graph_vessel.jpg');
         fs.copyFileSync(sourceFile, publicImagesFile);
-        console.log(`✅ Copiada imagen Open Graph: ${resource} a client/public/images/`);
+        console.log(`✅ Copiada imagen Open Graph a client/public/images/open_graph_vessel.jpg`);
         
         // 2. Carpeta whatsapp específicamente para WhatsApp
         const whatsappDir = path.join(__dirname, 'client/public/whatsapp');
@@ -63,14 +63,14 @@ resources.forEach(resource => {
           fs.mkdirSync(whatsappDir, { recursive: true });
           console.log(`✅ Directorio creado: ${whatsappDir}`);
         }
-        const whatsappFile = path.join(whatsappDir, 'share.png');
+        const whatsappFile = path.join(whatsappDir, 'share.jpg');
         fs.copyFileSync(sourceFile, whatsappFile);
-        console.log(`✅ Copiada imagen Open Graph como share.png a client/public/whatsapp/ para WhatsApp`);
+        console.log(`✅ Copiada imagen Open Graph como share.jpg a client/public/whatsapp/ para WhatsApp`);
         
-        // 3. Directamente en public como og-image.png para mayor compatibilidad
-        const publicRootFile = path.join(__dirname, 'client/public', 'og-image.png');
+        // 3. Directamente en public como og-image.jpg para mayor compatibilidad
+        const publicRootFile = path.join(__dirname, 'client/public', 'og-image.jpg');
         fs.copyFileSync(sourceFile, publicRootFile);
-        console.log(`✅ Copiada imagen Open Graph como og-image.png a client/public/`);
+        console.log(`✅ Copiada imagen Open Graph como og-image.jpg a client/public/`);
       }
     } else {
       console.log(`❌ Archivo de origen no encontrado: ${sourceFile}`);
