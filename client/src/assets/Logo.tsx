@@ -15,7 +15,11 @@ export const Logo = ({ className = "h-12", variant = "default" }: LogoProps) => 
       src={logoSrc} 
       alt="Vessel México Logo" 
       className={className}
-      style={{ objectFit: "contain" }} // Asegura que la imagen mantenga su proporción
+      style={{ 
+        objectFit: "contain", 
+        maxWidth: "100%",
+        height: variant === "default" ? "100%" : undefined
+      }} 
     />
   );
 };
