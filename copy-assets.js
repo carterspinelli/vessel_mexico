@@ -25,7 +25,8 @@ const resources = [
   'GTNS20A.jpg',
   'GTNS30A.jpg',
   'tab_logo.png', // Favicon para la pestaña del navegador
-  'open_graph_vessel.png' // Imagen para Open Graph
+  'open_graph_vessel.png', // Imagen para Open Graph
+  'vessel_logo_large_header.png' // Nuevo logo para el encabezado
 ];
 
 // Copiar cada recurso
@@ -38,11 +39,11 @@ resources.forEach(resource => {
       fs.copyFileSync(sourceFile, targetFile);
       console.log(`✅ Copiado: ${resource} a ${targetDir}`);
       
-      // Copiar favicon y Open Graph directamente al directorio public
-      if (resource === 'tab_logo.png') {
+      // Copiar archivos directamente al directorio public
+      if (resource === 'tab_logo.png' || resource === 'vessel_logo_large_header.png') {
         const publicFile = path.join(__dirname, 'client/public', resource);
         fs.copyFileSync(sourceFile, publicFile);
-        console.log(`✅ Copiado favicon: ${resource} a client/public/`);
+        console.log(`✅ Copiado: ${resource} a client/public/`);
       }
       
       // Copiar imagen de Open Graph a todas las ubicaciones necesarias
