@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Logo className="h-12 mb-4" variant="footer" />
             <p className="opacity-80 mb-4">
-              Vessel México trae las mejores herramientas profesionales japonesas al mercado mexicano, ofreciendo calidad, precisión y confiabilidad para cada trabajo.
+              Vessel México trae las mejores herramientas profesionales al mercado mexicano, ofreciendo calidad, precisión y confiabilidad para cada trabajo.
             </p>
             <p className="opacity-70 text-sm">
               © {year} Vessel México. Todos los derechos reservados.

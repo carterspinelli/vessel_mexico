@@ -23,7 +23,7 @@ export const contacts = pgTable("contacts", {
   name: text("name").notNull(),
   email: text("email").notNull(),
   phone: text("phone"),
-  subject: text("subject").notNull(),
+  company: text("company"),
   message: text("message").notNull(),
   createdAt: timestamp("created_at").defaultNow(),
   isRead: boolean("is_read").default(false),
@@ -33,7 +33,7 @@ export const contactSchema = createInsertSchema(contacts).pick({
   name: true,
   email: true,
   phone: true,
-  subject: true,
+  company: true,
   message: true,
 });
 
