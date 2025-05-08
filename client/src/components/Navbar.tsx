@@ -28,7 +28,7 @@ export default function Navbar({
         <a href="#" className="flex items-center">
           <Logo className="h-12" />
         </a>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {navItems.map((item) => (
@@ -42,7 +42,7 @@ export default function Navbar({
             </a>
           ))}
         </nav>
-        
+
         {/* Mobile Menu Button */}
         <button 
           className="md:hidden text-vessel-gray focus:outline-none"
@@ -65,7 +65,7 @@ export default function Navbar({
           </svg>
         </button>
       </div>
-      
+
       {/* Mobile Menu */}
       <div className={`md:hidden bg-white border-t border-gray-200 ${isMobileMenuOpen ? '' : 'hidden'}`}>
         <div className="container mx-auto px-4 py-3 space-y-2">
