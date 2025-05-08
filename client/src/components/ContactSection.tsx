@@ -15,7 +15,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -151,13 +156,13 @@ export default function ContactSection() {
     <motion.section
       id="contact"
       ref={containerRef}
-      className="container py-12 md:py-24 bg-white"
+      className="container mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-24 bg-white"
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
       variants={containerVariants}
     >
       <div className="text-center mb-12">
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl font-bold text-gray-900"
           variants={itemVariants}
         >
@@ -177,17 +182,23 @@ export default function ContactSection() {
               <CardHeader className="p-0">
                 <div className="flex items-start justify-between">
                   <div>
-                    <CardTitle className="text-3xl font-bold">Envíanos un mensaje</CardTitle>
+                    <CardTitle className="text-3xl font-bold">
+                      Envíanos un mensaje
+                    </CardTitle>
                     <CardDescription className="mt-2">
-                      Ponte en contacto con nuestro equipo para recibir soporte o cotizaciones de productos.
+                      Ponte en contacto con nuestro equipo para recibir soporte
+                      o cotizaciones de productos.
                     </CardDescription>
                   </div>
                 </div>
               </CardHeader>
-              
+
               <motion.div className="mt-8" variants={itemVariants}>
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-4"
+                  >
                     <FormField
                       control={form.control}
                       name="name"
@@ -307,9 +318,9 @@ export default function ContactSection() {
               </motion.div>
             </div>
           </motion.div>
-          
+
           <Separator className="lg:my-6 lg:hidden" />
-          
+
           {/* Información de contacto lado derecho */}
           <motion.div
             className="bg-muted/50 p-6 lg:w-3/5 lg:p-10"
@@ -317,7 +328,9 @@ export default function ContactSection() {
           >
             <div className="space-y-6">
               <div>
-                <h3 className="mb-4 text-lg font-semibold">Información de Contacto:</h3>
+                <h3 className="mb-4 text-lg font-semibold">
+                  Información de Contacto:
+                </h3>
                 <ul className="grid grid-cols-1 gap-4">
                   {contactInfo.map((item, index) => (
                     <motion.li
@@ -327,9 +340,7 @@ export default function ContactSection() {
                       custom={index}
                     >
                       <div className="bg-vessel-red/10 p-2 rounded-full mr-4">
-                        <div className="text-vessel-red">
-                          {item.icon}
-                        </div>
+                        <div className="text-vessel-red">{item.icon}</div>
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-800">
@@ -341,19 +352,20 @@ export default function ContactSection() {
                   ))}
                 </ul>
               </div>
-              
+
               <Separator className="my-6" />
-              
+
               <div>
-                <h3 className="mb-4 text-lg font-semibold">¿Por qué contactarnos?</h3>
+                <h3 className="mb-4 text-lg font-semibold">
+                  ¿Por qué contactarnos?
+                </h3>
                 <ul className="grid grid-cols-1 gap-3">
                   {[
                     "Asesoría técnica especializada",
                     "Cotizaciones personalizadas",
-                    "Atención a distribuidores", 
+                    "Atención a distribuidores",
                     "Soporte post-venta",
-                    "Garantía en todos los productos",
-                    "Envíos a todo México"
+                    "Envíos a todo México",
                   ].map((item, index) => (
                     <motion.li
                       key={index}

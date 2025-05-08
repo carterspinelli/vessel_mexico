@@ -24,7 +24,8 @@ const resources = [
   'GTNL30.jpg',
   'GTNS20A.jpg',
   'GTNS30A.jpg',
-  'tab_logo.png' // Favicon para la pestaña del navegador
+  'tab_logo.png', // Favicon para la pestaña del navegador
+  'open_graph_vessel.png' // Imagen para Open Graph
 ];
 
 // Copiar cada recurso
@@ -37,11 +38,23 @@ resources.forEach(resource => {
       fs.copyFileSync(sourceFile, targetFile);
       console.log(`✅ Copiado: ${resource} a ${targetDir}`);
       
-      // Copiar el favicon también directamente al directorio public
+      // Copiar favicon y Open Graph directamente al directorio public
       if (resource === 'tab_logo.png') {
         const publicFile = path.join(__dirname, 'client/public', resource);
         fs.copyFileSync(sourceFile, publicFile);
         console.log(`✅ Copiado favicon: ${resource} a client/public/`);
+      }
+      
+      // Copiar imagen de Open Graph a la carpeta images
+      if (resource === 'open_graph_vessel.png') {
+        const imagesDir = path.join(__dirname, 'client/public/images');
+        if (!fs.existsSync(imagesDir)) {
+          fs.mkdirSync(imagesDir, { recursive: true });
+          console.log(`✅ Directorio creado: ${imagesDir}`);
+        }
+        const publicFile = path.join(imagesDir, resource);
+        fs.copyFileSync(sourceFile, publicFile);
+        console.log(`✅ Copiada imagen Open Graph: ${resource} a client/public/images/`);
       }
     } else {
       console.log(`❌ Archivo de origen no encontrado: ${sourceFile}`);
