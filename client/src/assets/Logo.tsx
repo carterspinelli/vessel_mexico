@@ -8,7 +8,7 @@ interface LogoProps {
 }
 
 export const Logo = ({ className = "h-12", variant = "default" }: LogoProps) => {
-  const logoSrc = variant === "footer" ? removalAILogo : vesselmxLogo;
+  const logoSrc = variant === "footer" ? vesselmxLogo : removalAILogo;
   
   return (
     <img 
