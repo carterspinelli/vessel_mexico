@@ -1,7 +1,7 @@
 
 import vesselmxLogo from "@assets/vesselmx_logo.png";
 import removalAILogo from "@assets/245314b2-9efc-44d5-a09a-01b2067ca9b2_removalai_preview.png";
-import headerLogo from "@assets/vessel_logo_header.png";
+import headerLogo from "@assets/vessel_logo_header_2.png";
 
 interface LogoProps {
   className?: string;
