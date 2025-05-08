@@ -106,211 +106,184 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white text-gray-800 border-t border-gray-100">
-      <div className="container mx-auto px-4">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-2 text-gray-900">
+    <section id="contact" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-16">
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold text-gray-900"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             Contáctanos
-          </h2>
-          <div className="w-16 h-1 bg-vessel-red mx-auto mb-4"></div>
-          <p className="max-w-2xl mx-auto text-base text-gray-600">
-            ¿Tienes preguntas sobre nuestros productos profesionales o necesitas una
-            cotización? Nuestro equipo de especialistas está listo para ayudarte.
-          </p>
-        </motion.div>
+          </motion.h2>
+          <div className="w-12 h-1 bg-vessel-red mx-auto my-4"></div>
+        </div>
 
-        {/* Contenedor principal con barra roja a la izquierda */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Barra vertical roja */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-vessel-red transform -translate-x-1/2"></div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Columna de información de contacto */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="relative lg:pr-12 mb-10 lg:mb-0"
-            >
-              <div className="text-right hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2 pr-6">
-                <div className="w-4 h-4 rounded-full bg-vessel-red"></div>
-              </div>
-              
-              <div className="p-6 lg:p-0">
-                <h3 className="font-montserrat font-medium text-xl mb-8 text-gray-900 border-b border-gray-200 pb-2">
-                  Información de Contacto
-                </h3>
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+          {/* Formulario de contacto */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-700 font-medium">
+                        Nombre
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Nombre completo"
+                          className="h-11 border-gray-200 focus:ring-vessel-red focus:border-vessel-red"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-                <div className="space-y-8">
-                  {contactInfo.map((item) => (
-                    <div key={item.id} className="flex items-start">
-                      <div className="text-vessel-red flex-shrink-0 mr-4">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h4 className="font-montserrat font-medium text-base mb-1 text-gray-800">
-                          {item.title}
-                        </h4>
-                        <p className="text-gray-600 text-sm">{item.content}</p>
-                      </div>
-                    </div>
-                  ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-gray-700 font-medium">
+                          Correo Electrónico
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="correo@empresa.com"
+                            className="h-11 border-gray-200 focus:ring-vessel-red focus:border-vessel-red"
+                            type="email"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-gray-700 font-medium">
+                          Teléfono
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="(33) 1234-5678"
+                            className="h-11 border-gray-200 focus:ring-vessel-red focus:border-vessel-red"
+                            type="tel"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                 </div>
-                
-                <div className="mt-10 pt-6 border-t border-gray-100">
-                  <p className="text-sm text-gray-500">
-                    <span className="font-medium">Horario de atención:</span> Lunes a Viernes 9:00 AM - 6:00 PM
-                  </p>
-                </div>
-              </div>
-            </motion.div>
 
-            {/* Columna del formulario */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="relative lg:pl-12"
-            >
-              <div className="text-left hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 pl-6">
-                <div className="w-4 h-4 rounded-full bg-vessel-red"></div>
-              </div>
-              
-              <div className="p-6 lg:p-0">
-                <h3 className="font-montserrat font-medium text-xl mb-8 text-gray-900 border-b border-gray-200 pb-2">
-                  Envíanos un Mensaje
-                </h3>
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-700 font-medium">
+                        Empresa
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Nombre de la empresa"
+                          className="h-11 border-gray-200 focus:ring-vessel-red focus:border-vessel-red"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-                <Form {...form}>
-                  <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-5"
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-700 font-medium">
+                        Mensaje
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="¿En qué podemos ayudarte?"
+                          className="min-h-[120px] border-gray-200 focus:ring-vessel-red focus:border-vessel-red resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <div className="pt-2">
+                  <Button
+                    type="submit"
+                    className="bg-vessel-red hover:bg-red-700 text-white px-6 py-3"
+                    disabled={isSubmitting}
                   >
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-gray-700 font-montserrat text-sm">
-                            Nombre Completo
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Tu nombre"
-                              className="border-gray-200 focus:border-vessel-red focus:ring-1 focus:ring-vessel-red"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage className="text-xs" />
-                        </FormItem>
-                      )}
-                    />
+                    {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+                  </Button>
+                </div>
+              </form>
+            </Form>
+          </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-gray-700 font-montserrat text-sm">
-                              Correo Electrónico
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="tu.correo@ejemplo.com"
-                                className="border-gray-200 focus:border-vessel-red focus:ring-1 focus:ring-vessel-red"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage className="text-xs" />
-                          </FormItem>
-                        )}
-                      />
+          {/* Información de contacto */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex flex-col justify-center"
+          >
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-200">
+                Información de Contacto
+              </h3>
 
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-gray-700 font-montserrat text-sm">
-                              Teléfono
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="Tu número de teléfono"
-                                className="border-gray-200 focus:border-vessel-red focus:ring-1 focus:ring-vessel-red"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage className="text-xs" />
-                          </FormItem>
-                        )}
-                      />
+              <div className="space-y-6">
+                {contactInfo.map((item) => (
+                  <div key={item.id} className="flex items-start">
+                    <div className="text-vessel-red mr-4 mt-0.5">
+                      {item.icon}
                     </div>
-
-                    <FormField
-                      control={form.control}
-                      name="company"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-gray-700 font-montserrat text-sm">
-                            Empresa
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Nombre de tu empresa"
-                              className="border-gray-200 focus:border-vessel-red focus:ring-1 focus:ring-vessel-red"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage className="text-xs" />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-gray-700 font-montserrat text-sm">
-                            Mensaje
-                          </FormLabel>
-                          <FormControl>
-                            <Textarea
-                              placeholder="¿Cómo podemos ayudarte?"
-                              className="border-gray-200 focus:border-vessel-red focus:ring-1 focus:ring-vessel-red resize-none"
-                              rows={4}
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage className="text-xs" />
-                        </FormItem>
-                      )}
-                    />
-
-                    <div className="pt-2">
-                      <Button
-                        type="submit"
-                        className="bg-vessel-red hover:bg-red-700 text-white font-montserrat text-sm py-2 px-6"
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
-                      </Button>
+                    <div>
+                      <h4 className="text-base font-semibold text-gray-800">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600">{item.content}</p>
                     </div>
-                  </form>
-                </Form>
+                  </div>
+                ))}
               </div>
-            </motion.div>
-          </div>
+
+              <div className="mt-10 pt-4 border-t border-gray-200 text-center">
+                <p className="text-sm text-gray-500">
+                  Horario de atención: Lunes a Viernes 9:00 AM - 6:00 PM
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
