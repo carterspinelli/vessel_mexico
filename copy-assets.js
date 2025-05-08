@@ -45,9 +45,9 @@ resources.forEach(resource => {
         console.log(`✅ Copiado favicon: ${resource} a client/public/`);
       }
       
-      // Copiar imagen de Open Graph directamente a public y a la carpeta images
+      // Copiar imagen de Open Graph a todas las ubicaciones necesarias
       if (resource === 'open_graph_vessel.png') {
-        // Copiar a la carpeta images para mantener compatibilidad
+        // 1. Carpeta images para compatibilidad general
         const imagesDir = path.join(__dirname, 'client/public/images');
         if (!fs.existsSync(imagesDir)) {
           fs.mkdirSync(imagesDir, { recursive: true });
@@ -57,10 +57,20 @@ resources.forEach(resource => {
         fs.copyFileSync(sourceFile, publicImagesFile);
         console.log(`✅ Copiada imagen Open Graph: ${resource} a client/public/images/`);
         
-        // Copiar directamente a public como og-image.png (específico para WhatsApp)
+        // 2. Carpeta whatsapp específicamente para WhatsApp
+        const whatsappDir = path.join(__dirname, 'client/public/whatsapp');
+        if (!fs.existsSync(whatsappDir)) {
+          fs.mkdirSync(whatsappDir, { recursive: true });
+          console.log(`✅ Directorio creado: ${whatsappDir}`);
+        }
+        const whatsappFile = path.join(whatsappDir, 'share.png');
+        fs.copyFileSync(sourceFile, whatsappFile);
+        console.log(`✅ Copiada imagen Open Graph como share.png a client/public/whatsapp/ para WhatsApp`);
+        
+        // 3. Directamente en public como og-image.png para mayor compatibilidad
         const publicRootFile = path.join(__dirname, 'client/public', 'og-image.png');
         fs.copyFileSync(sourceFile, publicRootFile);
-        console.log(`✅ Copiada imagen Open Graph como og-image.png a client/public/ para WhatsApp`);
+        console.log(`✅ Copiada imagen Open Graph como og-image.png a client/public/`);
       }
     } else {
       console.log(`❌ Archivo de origen no encontrado: ${sourceFile}`);
