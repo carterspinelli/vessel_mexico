@@ -24,9 +24,9 @@ export default function Navbar({
 
   return (
     <header className="fixed w-full bg-white shadow-md z-50">
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <a href="#" className="flex items-center">
-          <Logo className="h-24 w-auto" />
+          <Logo className="h-12" />
         </a>
         
         {/* Desktop Navigation */}
