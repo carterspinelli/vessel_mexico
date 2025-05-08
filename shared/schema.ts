@@ -41,7 +41,7 @@ export type InsertContact = z.infer<typeof contactSchema>;
 export type Contact = typeof contacts.$inferSelect;
 
 // Update storage interface to include contact methods
-declare module "./server/storage" {
+declare module "../server/storage" {
   interface IStorage {
     createContact(contact: InsertContact): Promise<Contact>;
     getContactById(id: number): Promise<Contact | undefined>;
